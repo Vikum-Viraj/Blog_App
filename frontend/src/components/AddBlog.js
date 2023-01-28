@@ -58,7 +58,7 @@ const AddBlog = () => {
          boxShadow="10px 10px 20px #1b05a8"
         padding={4}  display="flex" flexDirection={'column'} width={"40%"} height={"60%"} margin='auto' marginTop={'20px'}>
 
-          <Typography fontWeight={'bold'} padding={3} color='grey' variant='h2' textAlign={'center'}>Post Your Blog.</Typography>
+          <Typography fontWeight={'bold'} padding={3} color='grey' variant='h2' textAlign={'center'}>Post Your Blog</Typography>
 
           <InputLabel  sx={labelStyles} >Title</InputLabel>
           <TextField name ="title" value={inputs.title} onChange={handleChange} margin='normal' variant='outlined'/>
@@ -66,7 +66,7 @@ const AddBlog = () => {
           <TextField name ="description" value={inputs.description} onChange={handleChange} margin='normal' variant='outlined'/>
           <InputLabel  sx={labelStyles} >Image URL</InputLabel>
           <TextField name ="imageURL" value={inputs.imageURL} onChange={handleChange} margin='normal' variant='outlined' />
-          <Button variant='contained' sx={{mt:2,mb:2,borderRadius:'10px'}} type='submit'>Save</Button>
+          <Button variant='contained' sx={{mt:2,mb:2,borderRadius:'10px'}} type='submit'>Post</Button>
         </Box>
       </form>
     </div>
