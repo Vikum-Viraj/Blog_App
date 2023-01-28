@@ -43,6 +43,7 @@ const AddBlog = () => {
 
   }
 
+  ///////////////
   const handleSubmit = (e) => {
    e.preventDefault();
    console.log(inputs);
