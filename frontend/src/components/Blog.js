@@ -29,7 +29,7 @@ const Blog = ({title,description,imageURL,userName,isUser,id}) => {
   }
 
   console.log(title,isUser);
- ///////////////////////
+ /////////////////////////
   return (
     <div>
         <Card  sx={{width: "40%",margin: "auto",mt: 2,padding: 2,boxShadow: "5px 5px 10px #ccc",":hover": 
