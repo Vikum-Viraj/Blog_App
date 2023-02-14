@@ -16,16 +16,18 @@ const Blog = ({title,description,imageURL,userName,isUser,id}) => {
     navigate(`/myBlogs/${id}`);
   }
 
-  const deleteRequest = async() => {
+  const deleteRequest = async() => {  
+    const res = await axios.delete(`http://localhost:5000/api/blog/${id}`)
+    .catch((err) => console.log(err));
 
-  
-    const res = await axios.delete(`http://localhost:5000/api/blog/${id}`).catch((err) => console.log(err));
     const data = await res.data;
     return data;
   }
 
   const handleDelete = (e) => {
-     deleteRequest().then(() => navigate("/")).then(() => navigate("/blogs"));
+     deleteRequest()
+     .then(() => navigate("/"))
+     .then(() => navigate("/blogs"));
   }
 
   console.log(title,isUser);

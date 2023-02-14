@@ -17,7 +17,8 @@ const Blogs = () => {
 
   useEffect(() => {
   
-    sendRequest().then((data) => setBlogs(data.blogs));
+    sendRequest()
+    .then((data) => setBlogs(data.blogs));
 
   },[])
 
@@ -28,11 +29,11 @@ const Blogs = () => {
       {blogs && blogs.map((blog,index) => 
         <Blog
          id={blog._id}
-         isUser = {localStorage.getItem("userId") === blog.user._id}
+         isUser =  {localStorage.getItem("userId") === blog.user._id}
          title  =  {blog.title}
          description = {blog.description} 
-         imageURL={blog.image} 
-         userName={blog.user.name} />
+         imageURL = {blog.image} 
+         userName = {blog.user.name} />
       )}
     
     </div>

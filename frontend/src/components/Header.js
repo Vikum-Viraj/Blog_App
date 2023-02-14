@@ -18,16 +18,18 @@ const Header = () => {
       
         <Typography  variant='h4'>Blogs App</Typography>
 
-        {isLoggedIn &&  <Box display="flex" marginLeft={'auto'} marginRight={'auto'}>
+        {isLoggedIn &&  
 
+          <Box display="flex" marginLeft={'auto'} marginRight={'auto'}>
           <Tabs textColor='inherit' value={state} onChange={(e,val)=>setState(val)}>
-
           <Tab LinkComponent={Link} to="/blogs" label ="All Blogs" />  
           <Tab LinkComponent={Link} to="/myBlogs" label ="My Blogs" />  
           <Tab LinkComponent={Link} to="/blogs/add" label ="Add Blogs" />  
           </Tabs>
 
-        </Box> }
+        </Box>
+
+        }
 
         <Box variant="contained" display="flex" marginLeft="auto">
 
@@ -37,13 +39,16 @@ const Header = () => {
             </>
             }
 
-            {isLoggedIn &&  <Button color='warning'
+           {isLoggedIn &&  
+              <Button color='warning'
               onClick={() => dispatch(authActions.logout())}
               sx={{margin:1,borderRadius:"6px"}}
               LinkComponent={Link} to="/auth"
-              variant="contained" >Log Out</Button> }
+              variant="contained" >Log Out</Button>
+               }
 
         </Box>
+
     </Toolbar>
     </AppBar>
   )

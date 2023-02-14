@@ -24,7 +24,7 @@ export const getAllUser = async(req,res,next) => {
 
 }
 
-
+////signup
 export const signup = async(req,res,next) => {
 
     const {name,email,password} = req.body;

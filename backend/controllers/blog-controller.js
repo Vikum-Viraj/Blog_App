@@ -38,7 +38,7 @@ export const addBlog = async(req,res,next) => {
 
     }catch(err){
 
-       return console.log(err);
+        return console.log(err);
     }
 
     if(!existingUser){
